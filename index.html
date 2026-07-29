@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a2e1c" />
+    <title>Тагир &amp; Алина — свадьба 13 августа 2026</title>
+    <meta
+      name="description"
+      content="Приглашение на свадьбу Тагира и Алины. 13 августа 2026, Казань — Центр семьи «Казан» и Оранжерея Aşk."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Тагир &amp; Алина — 13 августа 2026" />
+    <meta
+      property="og:description"
+      content="Мы приглашаем вас отпраздновать нашу свадьбу. Программа, дресс-код и места проведения."
+    />
+    <meta property="og:image" content="./images/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="hero__media" aria-hidden="true">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="./images/hero-sm.webp 750w, ./images/hero.webp 1400w"
+            sizes="100vw"
+          />
+          <img
+            class="hero__img"
+            src="./images/hero-sm.jpg"
+            srcset="./images/hero-sm.jpg 750w, ./images/hero.jpg 1400w"
+            sizes="100vw"
+            width="1400"
+            height="2100"
+            alt=""
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Свадьба</p>
+        <h1 class="hero__names">Тагир <span class="amp">&amp;</span> Алина</h1>
+        <p class="hero__date">13 августа 2026</p>
+        <p class="hero__lead">
+          Мы приглашаем вас отпраздновать наш день — будет необычно, тепло и по-настоящему наше.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#program">Программа</a>
+          <a
+            class="btn btn--ghost"
+            href="https://invite4wedding.ru/tagir-alina"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Подтвердить</a
+          >
+        </div>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="days">—</span>
+            <span class="countdown__label">дней</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="hours">—</span>
+            <span class="countdown__label">часов</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="mins">—</span>
+            <span class="countdown__label">минут</span>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#program" aria-label="К программе">
+        <span></span>
+      </a>
+    </header>
+
+    <main>
+      <section class="section section--program" id="program">
+        <div class="container reveal">
+          <p class="section__eyebrow">В этот день</p>
+          <h2 class="section__title">Программа</h2>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <time class="timeline__time" datetime="13:20">13:20</time>
+              <div class="timeline__body">
+                <h3>Регистрация брака</h3>
+                <p>Центр семьи «Казан»</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <time class="timeline__time" datetime="16:00">16:00</time>
+              <div class="timeline__body">
+                <h3>Welcome</h3>
+                <p>Оранжерея Aşk</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <time class="timeline__time" datetime="16:30">16:30</time>
+              <div class="timeline__body">
+                <h3>Выездная церемония</h3>
+                <p>Оранжерея Aşk</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <time class="timeline__time" datetime="17:00">17:00</time>
+              <div class="timeline__body">
+                <h3>Начало фуршета</h3>
+                <p>Оранжерея Aşk</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <time class="timeline__time" datetime="22:00">22:00</time>
+              <div class="timeline__body">
+                <h3>Afterparty</h3>
+                <p>Оранжерея Aşk</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--places" id="places">
+        <div class="container">
+          <p class="section__eyebrow reveal">Как нас найти</p>
+          <h2 class="section__title reveal">Места</h2>
+
+          <article class="place reveal">
+            <div class="place__info">
+              <p class="place__label">13:20</p>
+              <h3 class="place__name">Центр семьи «Казан»</h3>
+              <p class="place__address">г. Казань, ул. Сибгата Хакима, 4</p>
+              <a
+                class="btn btn--small"
+                href="https://yandex.ru/maps/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B8%D0%B1%D0%B3%D0%B0%D1%82%D0%B0%20%D0%A5%D0%B0%D0%BA%D0%B8%D0%BC%D0%B0%2C%204"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Открыть в Яндекс.Картах</a
+              >
+            </div>
+            <div class="place__map">
+              <iframe
+                title="Карта: Центр семьи Казан"
+                src="https://yandex.ru/map-widget/v1/?ll=49.1083%2C55.8128&z=16&pt=49.1083%2C55.8128%2Cpm2rdm&l=map"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+
+          <article class="place reveal">
+            <div class="place__info">
+              <p class="place__label">с 16:00</p>
+              <h3 class="place__name">Оранжерея Aşk</h3>
+              <p class="place__address">
+                Республика Татарстан, Лаишевский район, Орловское сельское поселение
+                <span class="place__hint">рядом с Конным двором «Оазис»</span>
+              </p>
+              <a
+                class="btn btn--small"
+                href="https://yandex.ru/maps/?text=%D0%9A%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%20%D0%9E%D0%B0%D0%B7%D0%B8%D1%81%20%D0%9B%D0%B0%D0%B8%D1%88%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Открыть в Яндекс.Картах</a
+              >
+            </div>
+            <div class="place__map">
+              <iframe
+                title="Карта: Оранжерея Aşk"
+                src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%20%D0%9E%D0%B0%D0%B7%D0%B8%D1%81%20%D0%9B%D0%B0%D0%B8%D1%88%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD&z=14&l=map"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--dress" id="dresscode">
+        <div class="container reveal">
+          <p class="section__eyebrow">Эстетика дня</p>
+          <h2 class="section__title">Дресс-код</h2>
+          <p class="section__text">
+            Будем счастливы, если вы поддержите настроение торжества и станете частью его палитры —
+            мягкие природные оттенки, без яркого неона.
+          </p>
+          <ul class="swatches" aria-label="Цвета дресс-кода">
+            <li class="swatch">
+              <span class="swatch__chip" style="--swatch: #6b7348"></span>
+              <span class="swatch__name">Olive</span>
+            </li>
+            <li class="swatch">
+              <span class="swatch__chip" style="--swatch: #7a1f2b"></span>
+              <span class="swatch__name">Burgundy</span>
+            </li>
+            <li class="swatch">
+              <span class="swatch__chip" style="--swatch: #4a2f24"></span>
+              <span class="swatch__name">Chocolate</span>
+            </li>
+            <li class="swatch">
+              <span class="swatch__chip" style="--swatch: #c4b39a"></span>
+              <span class="swatch__name">Beige</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--notes" id="notes">
+        <div class="container">
+          <p class="section__eyebrow reveal">Пожалуйста, учтите</p>
+          <h2 class="section__title reveal">Важно</h2>
+          <div class="notes">
+            <article class="note reveal">
+              <h3>Халяль · без алкоголя</h3>
+              <p>
+                Мероприятие безалкогольное. Просим воздержаться от алкоголя перед торжеством — нам
+                важно уважение к нашим ценностям.
+              </p>
+            </article>
+            <article class="note reveal">
+              <h3>Формат без детей</h3>
+              <p>
+                День будет активным. Просим оставить детей дома, чтобы вы могли полностью
+                погрузиться в праздник.
+              </p>
+            </article>
+            <article class="note reveal">
+              <h3>Личный транспорт</h3>
+              <p>
+                До места встречи удобнее добраться на своём авто — так всем будет комфортнее с
+                перемещениями.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--gallery" id="gallery">
+        <div class="container reveal">
+          <p class="section__eyebrow">Наша история</p>
+          <h2 class="section__title">Фото</h2>
+        </div>
+        <div class="gallery" role="list">
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08254.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08254.jpg" alt="Тагир и Алина" loading="lazy" width="1200" height="1800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item gallery__item--wide" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08129.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08129.jpg" alt="Тагир и Алина" loading="lazy" width="1200" height="800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08573.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08573.jpg" alt="Алина у дерева" loading="lazy" width="1200" height="1800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08624.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08624.jpg" alt="Кольцо и ягоды" loading="lazy" width="1200" height="1500" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08750.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08750.jpg" alt="Алина среди папоротников" loading="lazy" width="1200" height="1800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08929.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08929.jpg" alt="Тагир и Алина в лесу" loading="lazy" width="1200" height="1800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08339.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08339.jpg" alt="Тагир и Алина" loading="lazy" width="1200" height="1800" />
+            </picture>
+          </figure>
+          <figure class="gallery__item" role="listitem">
+            <picture>
+              <source srcset="./images/gallery-DSC08674.webp" type="image/webp" />
+              <img src="./images/gallery-DSC08674.jpg" alt="Тагир и Алина" loading="lazy" width="1200" height="1500" />
+            </picture>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--contacts" id="contacts">
+        <div class="container reveal">
+          <p class="section__eyebrow">Вопросы</p>
+          <h2 class="section__title">Организатор</h2>
+          <p class="section__text">
+            Если хотите сделать сюрприз или уточнить детали — напишите или позвоните Карине.
+          </p>
+          <p class="contact-name">Карина</p>
+          <a class="contact-phone" href="tel:+79376271616">8 (937) 627-16-16</a>
+          <p class="section__text section__text--tight">
+            Сразу после свадьбы мы уезжаем, поэтому вместо живых букетов —
+            <a
+              href="https://docs.google.com/forms/d/1lKlRokaVigtPmBhCS4aPXn-BRaDH4zsHtpeMM3u8xnQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              >цветочная подписка</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--rsvp" id="rsvp">
+        <div class="container reveal">
+          <p class="section__eyebrow">Ждём ответа</p>
+          <h2 class="section__title">Подтвердите присутствие</h2>
+          <p class="section__text">
+            Просьба заполнить анкету до <strong>5 августа 2026</strong> — так нам будет проще
+            подготовиться к встрече с вами.
+          </p>
+          <a
+            class="btn btn--primary btn--large"
+            href="https://invite4wedding.ru/tagir-alina"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Заполнить анкету</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__names">Тагир &amp; Алина</p>
+      <p class="footer__date">13.08.2026 · Казань</p>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
