@@ -180,9 +180,9 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 58%;
-  transform: scale(1.06);
-  animation: heroZoom 12s var(--ease) forwards;
+  object-position: center 54%;
+  transform: scale(1.08);
+  animation: heroZoom 14s var(--ease) forwards;
 }
 
 .hero__veil {
@@ -205,7 +205,23 @@ a:hover {
   width: var(--container);
   margin: 0 auto;
   padding: 5.5rem 0 4.5rem;
-  animation: fadeUp 1s var(--ease) both;
+  animation: fadeUp 1.1s var(--ease) 0.15s both;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+  animation: fadeUp 1s var(--ease) 0.35s both;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 4.5rem));
+  gap: 0.75rem;
+  margin-top: 1.85rem;
+  animation: fadeUp 1s var(--ease) 0.5s both;
 }
 
 .hero__content::before {
@@ -267,20 +283,6 @@ a:hover {
   color: rgba(255, 250, 243, 0.95);
   font-size: 1rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.6rem;
-}
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 4.5rem));
-  gap: 0.75rem;
-  margin-top: 1.85rem;
 }
 
 .countdown__item {
@@ -403,6 +405,54 @@ a:hover {
   font-size: 0.95rem;
 }
 
+/* —— Photo breaks —— */
+.photo-break {
+  position: relative;
+  margin: 0;
+  height: min(68vh, 36rem);
+  overflow: hidden;
+  background: var(--forest-deep);
+}
+
+.photo-break__media {
+  position: absolute;
+  inset: -8% 0;
+  will-change: transform;
+}
+
+.photo-break__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.08);
+}
+
+.photo-break.is-visible .ken-burns {
+  animation: kenBurns 12s var(--ease) forwards;
+}
+
+.photo-break__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 12, 9, 0.15), rgba(8, 12, 9, 0.35) 50%, rgba(8, 12, 9, 0.55));
+}
+
+.photo-break__caption {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 250, 243, 0.88);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
 /* —— Places —— */
 .place {
   margin-top: 2.25rem;
@@ -459,22 +509,75 @@ a:hover {
   border: 0;
 }
 
-/* —— Dress code —— */
-.section--dress {
-  background: linear-gradient(180deg, rgba(26, 46, 28, 0.92), rgba(15, 26, 17, 0.96));
+/* —— Dress / RSVP photo backgrounds —— */
+.section--dress,
+.section--rsvp {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--cream);
+  background: var(--forest-deep);
+}
+
+.section__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.section__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.section__bg-veil {
+  position: absolute;
+  inset: 0;
+}
+
+.section__bg-veil--forest {
+  background:
+    linear-gradient(180deg, rgba(8, 12, 9, 0.72), rgba(8, 12, 9, 0.88)),
+    radial-gradient(80% 60% at 50% 20%, rgba(122, 31, 43, 0.22), transparent 70%);
+}
+
+.section__bg-veil--berry {
+  background:
+    linear-gradient(180deg, rgba(20, 8, 10, 0.78), rgba(12, 6, 8, 0.92)),
+    radial-gradient(70% 50% at 50% 0%, rgba(122, 31, 43, 0.35), transparent 65%);
+}
+
+.section--dress .section__title,
+.section--rsvp .section__title {
   color: var(--cream);
 }
 
-.section--dress .section__title {
-  color: var(--cream);
-}
-
-.section--dress .section__eyebrow {
+.section--dress .section__eyebrow,
+.section--rsvp .section__eyebrow {
   color: #d7a0a7;
 }
 
-.section--dress .section__text {
-  color: rgba(243, 235, 224, 0.78);
+.section--dress .section__text,
+.section--rsvp .section__text {
+  color: rgba(243, 235, 224, 0.86);
+}
+
+.section--rsvp {
+  text-align: center;
+}
+
+.section--rsvp .section__text {
+  margin-inline: auto;
+}
+
+.section--rsvp .btn {
+  margin-top: 0.35rem;
+}
+
+.section--rsvp .btn--primary {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .swatches {
@@ -533,52 +636,102 @@ a:hover {
   font-size: 0.96rem;
 }
 
-/* —— Gallery —— */
+/* —— Carousel —— */
 .section--gallery {
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
-.gallery {
-  display: flex;
-  gap: 0.65rem;
-  overflow-x: auto;
-  padding: 0.35rem max(4vw, calc((100vw - 42rem) / 2)) 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+.carousel {
+  margin-top: 1.5rem;
 }
 
-.gallery__item {
-  margin: 0;
-  flex: 0 0 auto;
-  width: min(68vw, 16.5rem);
-  scroll-snap-align: start;
-  border-radius: 3px;
+.carousel__viewport {
   overflow: hidden;
-  background: rgba(26, 46, 28, 0.1);
+  border-radius: 4px;
+  background: rgba(26, 46, 28, 0.08);
+  touch-action: pan-y;
+  user-select: none;
 }
 
-.gallery__item--wide {
-  width: min(82vw, 22rem);
+.carousel__track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: transform 0.55s var(--ease);
+  will-change: transform;
 }
 
-.gallery__item img {
+.carousel__slide {
+  flex: 0 0 100%;
+  margin: 0;
+  min-width: 100%;
+}
+
+.carousel__slide img {
   width: 100%;
-  height: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  transition: transform 0.7s var(--ease);
 }
 
-.gallery__item--wide img {
+.carousel__slide:nth-child(2) img {
   aspect-ratio: 3 / 2;
 }
 
-.gallery__item:hover img {
-  transform: scale(1.04);
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
-/* —— Contacts / RSVP —— */
+.carousel__btn {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid rgba(122, 31, 43, 0.3);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 245, 0.7);
+  color: var(--forest-deep);
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel__btn:hover {
+  background: rgba(122, 31, 43, 0.1);
+}
+
+.carousel__btn:active {
+  transform: scale(0.96);
+}
+
+.carousel__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(28, 24, 20, 0.22);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carousel__dot.is-active {
+  background: var(--burgundy);
+  transform: scale(1.25);
+}
+
+/* —— Contacts —— */
 .contact-name {
   margin: 0;
   font-family: var(--font-display);
@@ -594,21 +747,6 @@ a:hover {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.02em;
-}
-
-.section--rsvp {
-  background:
-    linear-gradient(180deg, rgba(122, 31, 43, 0.08), rgba(122, 31, 43, 0.14)),
-    var(--cream-soft);
-  text-align: center;
-}
-
-.section--rsvp .section__text {
-  margin-inline: auto;
-}
-
-.section--rsvp .btn {
-  margin-top: 0.35rem;
 }
 
 .footer {
@@ -636,13 +774,46 @@ a:hover {
 /* —— Motion —— */
 .reveal {
   opacity: 0;
-  transform: translateY(1.25rem);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transform: translateY(1.6rem);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+.stagger__item {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.stagger.is-visible .stagger__item,
+.reveal.is-visible .stagger__item {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger.is-visible .stagger__item:nth-child(1),
+.reveal.is-visible .stagger__item:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.stagger.is-visible .stagger__item:nth-child(2),
+.reveal.is-visible .stagger__item:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.stagger.is-visible .stagger__item:nth-child(3),
+.reveal.is-visible .stagger__item:nth-child(3) {
+  transition-delay: 0.19s;
+}
+.stagger.is-visible .stagger__item:nth-child(4),
+.reveal.is-visible .stagger__item:nth-child(4) {
+  transition-delay: 0.26s;
+}
+.stagger.is-visible .stagger__item:nth-child(5),
+.reveal.is-visible .stagger__item:nth-child(5) {
+  transition-delay: 0.33s;
 }
 
 @keyframes fadeUp {
@@ -658,7 +829,16 @@ a:hover {
 
 @keyframes heroZoom {
   from {
-    transform: scale(1.06);
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1.08);
   }
   to {
     transform: scale(1);
@@ -683,7 +863,7 @@ a:hover {
   }
 
   .hero__img {
-    object-position: center 52%;
+    object-position: center 48%;
   }
 
   .hero__content {
@@ -714,12 +894,13 @@ a:hover {
     aspect-ratio: 5 / 4;
   }
 
-  .gallery__item {
-    width: 18rem;
+  .photo-break {
+    height: min(72vh, 42rem);
   }
 
-  .gallery__item--wide {
-    width: 24rem;
+  .carousel__slide img {
+    aspect-ratio: 4 / 5;
+    max-height: 70vh;
   }
 }
 
@@ -740,12 +921,21 @@ a:hover {
 
   .hero__img,
   .hero__content,
+  .hero__actions,
+  .countdown,
   .hero__scroll span,
-  .gallery__item img,
-  .reveal {
+  .photo-break__img,
+  .ken-burns,
+  .carousel__track,
+  .reveal,
+  .stagger__item {
     animation: none !important;
     transition: none !important;
     opacity: 1;
-    transform: none;
+    transform: none !important;
+  }
+
+  .photo-break__media {
+    inset: 0;
   }
 }
