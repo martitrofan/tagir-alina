@@ -191,11 +191,11 @@ a:hover {
   background:
     linear-gradient(
       180deg,
-      rgba(8, 12, 9, 0.15) 0%,
-      rgba(8, 12, 9, 0.2) 35%,
-      rgba(8, 12, 9, 0.72) 58%,
-      rgba(8, 12, 9, 0.92) 78%,
-      rgba(8, 12, 9, 0.97) 100%
+      rgba(8, 12, 9, 0.28) 0%,
+      rgba(8, 12, 9, 0.35) 32%,
+      rgba(8, 12, 9, 0.78) 55%,
+      rgba(8, 12, 9, 0.94) 75%,
+      rgba(8, 12, 9, 0.98) 100%
     );
 }
 
@@ -212,17 +212,13 @@ a:hover {
   content: "";
   position: absolute;
   z-index: -1;
-  left: -1.1rem;
-  right: -1.1rem;
-  top: 1.4rem;
-  bottom: 0.4rem;
-  border-radius: 4px;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 12, 9, 0) 0%,
-    rgba(8, 12, 9, 0.55) 18%,
-    rgba(8, 12, 9, 0.78) 100%
-  );
+  left: -1.25rem;
+  right: -1.25rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  border-radius: 6px;
+  background: rgba(8, 12, 9, 0.72);
+  box-shadow: 0 0 48px 28px rgba(8, 12, 9, 0.55);
   pointer-events: none;
 }
 
